@@ -23,14 +23,11 @@ int[] CreateArr(int Number)
 // void <- (int[])
 void FillArray(int[] binNumber)
 {
-    int count = binNumber.Length;
-    for (int i = 0; i < count; i++)
+      int count = binNumber.Length;
+    for (int i = 1; i < count; i++)
     {
+        binNumber[0] = 1;
         binNumber[i] = Random.Shared.Next(2);
-        if (binNumber[0] == 0)
-        {
-            i--;
-        }
     }
 }
 // 4. Печать массива
